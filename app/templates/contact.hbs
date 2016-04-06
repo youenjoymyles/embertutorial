@@ -1,0 +1,27 @@
+<h1>Contact</h1>
+
+<div class="jumbotron text-center">
+
+
+
+    <div class="form-horizontal form-group form-group-lg row">
+        <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-1 col-md-8 col-md-offset-2">
+          <p>Don't miss our launch date, request an invitation now.</p>
+            <br />
+          {{input type="email" value=emailAddress class="form-control" placeholder="Please type your e-mail address." autofocus="autofocus"}}
+            <br />
+          {{textarea class="form-control" value=message placeholder="Your message. (At least 5 characters.)" rows="7"}}
+            <br />
+          <button class="btn btn-primary btn-lg btn-block" disabled={{isDisabled}} {{action 'submitContact'}}>Submit</button>
+        </div>
+
+    </div>
+
+    {{#if responseMessage}}
+      <div class="alert alert-success">{{responseMessage}}</div>
+    {{/if}}
+
+    <br/><br/>
+
+
+</div>

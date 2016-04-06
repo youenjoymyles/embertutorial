@@ -1,0 +1,21 @@
+<h1>Contact Submissions</h1>
+
+<table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+          <th>ID</th>
+          <th>E-mail</th>
+          <th>Response</th>
+      </tr>
+    </thead>
+    <tbody>
+    {{#each model as |submittedContact|}}
+        <tr>
+            <th>{{submittedContact.id}}</th>
+            <td>{{submittedContact.email}}</td>
+            <td>{{submittedContact.response}}</td>
+        </tr>
+    {{/each}}
+
+    </tbody>
+</table>
